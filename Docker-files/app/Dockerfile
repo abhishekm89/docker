@@ -1,6 +1,8 @@
 FROM openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
 RUN git clone https://github.com/abhishekm89/vprofile-project.git
+# In case you want to mount Project Directory locally.
+# ADD ../../vprofile-project (app/Docker-files/vprofile-project)
 RUN cd vprofile-project && git checkout docker && mvn clean install
 
 
