@@ -34,7 +34,7 @@ services:
       - vproappdata:/usr/local/tomcat/webapps
   vproweb:
     build:
-      context: /Docker-files/web
+      context: ./Docker-files/web
     image: abhishekm89/web
     container_name: vproweb
     ports:
